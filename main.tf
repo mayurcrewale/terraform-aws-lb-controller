@@ -1,5 +1,5 @@
 module "irsa" {
-  source = "git::git@github.com:mayurcrewale/terraform-aws-irsa.git?ref=v1.0.0"
+  source = "git::https://github.com/mayurcrewale/terraform-aws-irsa.git?ref=v1.0.0"
 
   role_name            = "${var.cluster_name}-aws-lb-controller"
   oidc_provider_arn    = var.oidc_provider_arn
