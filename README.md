@@ -4,13 +4,13 @@ Installs the [AWS Load Balancer Controller](https://kubernetes-sigs.github.io/aw
 via the Terraform `helm` provider, with its own IRSA role carrying the
 official controller IAM policy (`iam-policy.json`).
 
-Depends on [`terraform-aws-irsa`](../terraform-aws-irsa) — see `main.tf`.
+Depends on [`terraform-aws-irsa`](https://github.com/mayurcrewale/terraform-aws-irsa) — see `main.tf`.
 
 ## Usage
 
 ```hcl
 module "lb_controller" {
-  source = "git::https://example.com/your-org/terraform-aws-lb-controller.git?ref=v1.0.0"
+  source = "git::git@github.com:mayurcrewale/terraform-aws-lb-controller.git?ref=v1.0.0"
 
   cluster_name      = module.eks_cluster.cluster_name
   region            = "eu-west-1"

@@ -1,8 +1,5 @@
-# Local git:: file:// source for local testing only — this path is specific
-# to this machine. Once terraform-aws-irsa has a real remote, swap this for:
-#   source = "git::https://example.com/your-org/terraform-aws-irsa.git?ref=v1.0.0"
 module "irsa" {
-  source = "git::file:///Users/mayurrawale/dd_decom/terraform-aws-irsa?ref=v1.0.0"
+  source = "git::git@github.com:mayurcrewale/terraform-aws-irsa.git?ref=v1.0.0"
 
   role_name            = "${var.cluster_name}-aws-lb-controller"
   oidc_provider_arn    = var.oidc_provider_arn
